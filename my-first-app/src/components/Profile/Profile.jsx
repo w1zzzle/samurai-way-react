@@ -1,14 +1,14 @@
 import MyPosts from "./MyPosts/MyPosts";
-import s from "./Profile.module.css"
+import s from "./Profile.module.css";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
-  return (
-    <div className={s.content}>
-      <img src="https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg" alt=""></img>
-      <div>Ava + description</div>
-      <MyPosts />
-    </div>
-  );
-}
+    return (
+        <div>
+            <ProfileInfo />
+            <MyPosts />
+        </div>
+    );
+};
 
 export default Profile;
