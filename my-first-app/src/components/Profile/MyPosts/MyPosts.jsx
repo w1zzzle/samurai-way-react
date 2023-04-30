@@ -9,9 +9,9 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef(); // создаем ссылку на объект
 
     let addPost = () => {
-        debugger;
         let text = newPostElement.current.value; // обращаемся к html элементу 
         props.addPost(text);
+        newPostElement.current.value = '';
     }
 
     return (
