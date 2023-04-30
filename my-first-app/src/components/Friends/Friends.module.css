@@ -1,0 +1,4 @@
+.friendsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
