@@ -1,8 +1,15 @@
 .header {
+  display: flex;
+  align-items: center;
   grid-area: h;
   background-color: aqua;
 }
 
 .header img {
   width: 80px;
+}
+
+.title {
+  margin-left: 20px;
+  font-size: 30px;
 }
