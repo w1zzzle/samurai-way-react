@@ -20,6 +20,7 @@ const App = (props) => {
                         <Route path="/dialogs/*" 
                         element={<Dialogs 
                             state={props.state.dialogsPage}
+                            store={props.store}
                             />} />
                     </Routes>
                 </div>
