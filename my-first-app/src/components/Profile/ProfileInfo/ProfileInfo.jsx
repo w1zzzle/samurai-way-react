@@ -3,7 +3,7 @@ import s from "./ProfileInfo.module.css";
 const ProfileInfo = () => {
     return (
         <div>
-            <img
+            <img className={s.header}
                 src="https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg"
                 alt=""
             ></img>
