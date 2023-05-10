@@ -1,25 +1,27 @@
 import "./App.css";
-import Dialogs from "./components/Dialogs/Dialogs";
-import Header from "./components/Header/Header";
-import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
-import UsersContainer from "./components/Users/UsersContainer";
 import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import ProfileContainer from "./components/Profile/ProfileContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 const App = (props) => {
     return (
-            <div className="app-wrapper">
-                <Header />
-                <Navbar/>
-                <div className="app-wrapper-content">
-                    <Routes>
-                        <Route path="/profile" element={<Profile />} />
-                        <Route path="/dialogs/*" element={<DialogsContainer />} />
-                        <Route path="/users" element={<UsersContainer />} />
-                    </Routes>
-                </div>
+        <div className="app-wrapper">
+            <HeaderContainer />
+            <Navbar />
+            <div className="app-wrapper-content">
+                <Routes>
+                    <Route path="/profile" element={<ProfileContainer />}>
+                        <Route path=":userId" element={<ProfileContainer />} />
+                    </Route>
+                    {/* <Route path="/profile/*" element={<ProfileContainer />} /> */}
+                    <Route path="/dialogs/*" element={<DialogsContainer />} />
+                    <Route path="/users" element={<UsersContainer />} />
+                </Routes>
             </div>
+        </div>
     );
 };
 
