@@ -38,6 +38,6 @@ let mapStateToProps = (state) => ({
 
 export default compose(
     withRouter,
-    connect(mapStateToProps, { getUserProfile }),
-    withAuthNavigate
+    connect(mapStateToProps, { getUserProfile })
+    //withAuthNavigate
 )(ProfileContainer)
